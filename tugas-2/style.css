@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #101820;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
+/* Bagian Canvas - Full Screen Layar Utama */
+#canvas-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Bagian Gambar Referensi di Bawah Canvas */
+#image-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #0d1117;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-top: 2px solid #21262d;
+}
+
+#image-container h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#image-container img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}
+
+#info {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  color: white;
+  background: rgba(0, 0, 0, .58);
+  padding: 12px 15px;
+  border-radius: 10px;
+  line-height: 1.5;
+  max-width: 340px;
+  font-size: 13px;
+}
+
+#controls {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 18px;
+  cursor: pointer;
+  color: #10202b;
+  background: #f4f7f8;
+  font-weight: bold;
+}
+
+button:hover { background: #cde8f3; }
