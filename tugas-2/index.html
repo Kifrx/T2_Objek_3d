@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animasi Mobil 3D - WebGL Murni</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="glcanvas"></canvas>
+
+      <div id="info">
+        <b>Campus Drive — WebGL murni</b><br />
+        Kamera: diam di tepi jalan, melihat kendaraan menjauh<br />
+        W: percepat &nbsp; S: perlambat<br />
+        A / D: geser kiri-kanan<br />
+        Space: jeda / lanjut
+      </div>
+
+      <div id="controls">
+        <button id="toggle">Jeda</button>
+        <button id="reset">Ulangi</button>
+      </div>
+    </div>
+
+    <div id="image-container">
+      <h2>Foto Referensi Asli</h2>
+      <img src="Mobil-kampus.png" alt="Foto Referensi Mobil Kampus" />
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
