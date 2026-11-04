@@ -14,15 +14,15 @@ if (!gl) {
 // 1. PENGATURAN SUASANA
 // =====================================================================
 const SKY_TOP    = '#5fa6ee';
-const SKY_HORIZ  = '#bcdcf3';
+const SKY_HORIZ  = '#bcf3cf';
 const SUN_COLOR  = '#fff6e6';
 const SUN_POS    = [14, 26, -4];
 const HEMI_SKY   = '#dcefff';
 const HEMI_GROUND= '#7a9158';
 const AMBIENT    = 0.6;
 const SUN_POWER  = 1.1;
-const FOG_NEAR   = 60;
-const FOG_FAR    = 190;
+const FOG_NEAR   = 200;
+const FOG_FAR    = 4500;
 
 function hexToRgb(hex) {
   const n = parseInt(hex.replace('#', ''), 16);
@@ -263,6 +263,7 @@ const GEO = {
   skyDome: sphereGeo(16, 24)
 };
 
+
 // =====================================================================
 // 6. TEXTURE PROSEDURAL
 // =====================================================================
@@ -416,7 +417,7 @@ function addTree(x, z, s, lean) {
   }
   trees.push({ x, z, s, crowns });
 }
-for (let z = 18; z > -170; z -= 6) {
+for (let z = 8; z > -170; z -= 6) {
   addTree(-9.8 - Math.random() * 1.2, z,     1.1 + Math.random() * .4, 1);
   addTree( 8.3 + Math.random() * .6,  z - 2, 1.0 + Math.random() * .4, -.5);
   addTree(21 + Math.random() * 2,     z - 4, 1.2 + Math.random() * .5, -.3);
@@ -456,7 +457,7 @@ function drawEnvironment() {
   drawCurbs(6.2);
   drawCurbs(10.4);
 
-  for (let z = 15; z > -150; z -= 14) {
+  for (let z = 22; z > -150; z -= 14) {
     push();
     translate(8.2, .3, z);
     scale(1.4, .72, 1.2);
@@ -464,7 +465,7 @@ function drawEnvironment() {
     drawMesh(GEO.sphere, MAT.leaf[2]);
     pop();
   }
-  for (let z = 4; z > -150; z -= 38) {
+  for (let z = 150; z > -150; z -= 38) {
     push();
     translate(7.4, 4.5, z);
     drawMesh(cylinderGeo(.14, .2, 9, 10), MAT.pole);
